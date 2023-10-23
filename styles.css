@@ -1,9 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
 body {
-    background-color: aquamarine;
+    background-color: white;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 960px;
+    height: 960px;
 }
 .cell {
-    height: 30px;
-    width: 30px;
+
+    flex-grow: 1;
     border: solid 1px;
+}
+.cell:hover {
+    background-color: black;
+}
+.row {
+    display: flex;
+    flex-grow: 1;
+}
+footer {
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
