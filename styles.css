@@ -1,0 +1,9 @@
+body {
+    background-color: aquamarine;
+    display: flex;
+}
+.cell {
+    height: 30px;
+    width: 30px;
+    border: solid 1px;
+}
