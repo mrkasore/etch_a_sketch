@@ -1,29 +1,30 @@
 const container = document.querySelector('.container');
+const body = document.querySelector('body');
 let isPressed = false;
+const btnGrid = document.querySelector('.gridButton');
+const inp = document.querySelector('#inp');
+
+
 
 //Create grid
-for (let i = 0; i < 16; i++) {
-    let div = document.createElement('div');
-    div.setAttribute('class', 'row');
-    for (let y = 0; y < 16; y++) {
-        let divIn = document.createElement('div');
-        divIn.setAttribute('class', 'cell');
-        div.appendChild(divIn);
+function createGrid(num) {
+    for (let i = 0; i < num; i++) {
+        let div = document.createElement('div');
+        div.setAttribute('class', 'row');
+        for (let y = 0; y < num; y++) {
+            let divIn = document.createElement('div');
+            divIn.setAttribute('class', 'cell');
+            div.appendChild(divIn);
+        }
+        container.appendChild(div);
     }
-    container.appendChild(div);
 }
+
 
 
 const allCells = document.querySelectorAll('.cell');
 
-allCells.forEach(item => {
-    item.addEventListener('mousedown', function(e) {
-        //console.log(e.target);
-            //e.target.style.backgroundColor = 'black';
-        
-    })
-});
-
+// Mouse check
 container.addEventListener('mousedown', function(e) {
     isPressed = true;
 }); 
@@ -45,3 +46,18 @@ container.addEventListener('click', function(e) {
     
 });
 
+
+
+btnGrid.addEventListener('click', function(e) {
+    console.log(inp.value);
+    deleteItems();
+    createGrid(inp.value);
+});
+
+function deleteItems() {
+    var deleteElement = container.querySelectorAll('.row');
+    for (let i = 0; i < deleteElement.length; i++) {
+      deleteElement[i].remove();
+    }
+  }
+createGrid(16);
