@@ -9,6 +9,8 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 0;
+    background-color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .container {
     display: flex;
@@ -16,6 +18,7 @@ body {
     justify-content: center;
     width: 600px;
     height: 600px;
+    background-color: white;
 }
 .cell {
 
@@ -31,4 +34,45 @@ body {
 }
 footer {
     padding-bottom: 20px;
+}
+
+.colors {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    
+}
+
+.rgb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.rgb-range {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 30px;
+}
+button {
+    height: 35px;
+    background-color: black;
+    color: white;
+}
+
+.eraser {
+    height: 50px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+#inp {
+    width: 50px;
 }

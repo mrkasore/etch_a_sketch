@@ -9,11 +9,29 @@
 </head>
 <body>
     <h1>Etch a Scetch</h1>
+    
     <div class="form">
-        <input type="number" name="" id="inp">
-        <button class="gridButton">Make Grid</button>
+
+        <div>
+            <input type="number" name="" id="inp" value="16">
+            <button class="gridButton">Make Grid</button>
+        </div>
+        
+        <div class="rgb">
+            <div class="colors"></div>
+            <div class="rgb-range">
+                Red: <input type="range" min="0" max="255" id="red" value="0">
+                Green: <input type="range" min="0" max="255" id="green" value="0">
+                Blue: <input type="range" min="0" max="255" id="blue" value="0">
+            </div>
+            <button class="eraser">Eraser</button>
+            
+        </div>
     </div>
+
+    
     <div class="container"></div>
+
     <footer>Made by MrKasore</footer>
 </body>
 </html>
